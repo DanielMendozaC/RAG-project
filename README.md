@@ -72,11 +72,11 @@ The system can answer questions like:
 
 ## Project Structure
 ```
-├── data_preprocessing.py          # PDF → clean text extraction
+├── data_preprocessing.py    # PDF → clean text extraction
 ├── chunking.py              # Text → 126 semantic chunks
 ├── embedding_storage.py     # Chunks → vector embeddings → ChromaDB
 ├── RAG.py                   # Query → retrieve → generate pipeline
-├── data.ml_clean.txt             # Preprocessed document (66K chars)
-├── data/chunks.json              # 126 text chunks with metadata
+├── data.ml_clean.txt        # Preprocessed document (66K chars)
+├── data/chunks.json         # 126 text chunks with metadata
 └── chroma_db/               # Persistent vector database
 ```
