@@ -82,7 +82,7 @@ def rag_query(query):
     
     print(f" Retrieved {len(chunks)} chunks\n")
     for i, chunk in enumerate(chunks):
-        print(f" Chunk {i+1}: {chunk[:100]}...")
+        print(f" \nChunk {i+1}: {chunk}\n")
     
     # Step 2: Generate
     print("\n Generating answer\n")
@@ -93,11 +93,9 @@ def rag_query(query):
 
 if __name__ == "__main__":
     # Test queries
-
+ 
     test_queries = [
-        "Who coined the term 'machine learning' in 1959?",
-        "What is Tom M. Mitchell's formal definition of machine learning?",
-        "What was the 'Cybertron' machine developed by Raytheon Company in the 1960s?"
+        "What happened in 1957?",
     ]
     print("\n\n**Testing RAG system**")
     
@@ -105,9 +103,9 @@ if __name__ == "__main__":
         print(f'\n\nQuery {i+1}')
         rag_query(query)
 
-    print("\n\n\n**Testing without using the RAG systems**")
+    # print("\n\n\n**Testing without using the RAG systems**")
 
-    for i, query in enumerate(test_queries):
-        print(f'\n\nQuery {i+1}\n')
-        response = generate_answer_no_rag(query=query)
-        print(f'{response}')
+    # for i, query in enumerate(test_queries):
+    #     print(f'\n\nQuery {i+1}\n')
+    #     response = generate_answer_no_rag(query=query)
+    #     print(f'{response}')
